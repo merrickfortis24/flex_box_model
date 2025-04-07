@@ -3,31 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flexbox Layout Example</title>
+  <title>Sample Website with Flexbox</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      box-sizing: border-box;
     }
 
-    .flex-container {
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #027e7e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    h1, h2 {
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    nav {
+      background-color: #035252;
+      color: white;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
       display: flex;
-      flex-direction: row;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      padding: 5px 10px;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: lightgray;
+    }
+
+    section, article, aside {
+      background-color: #027e7e;
+      color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    /* Flexbox Section */
+    .flex-demo {
+      display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       gap: 20px;
+      background-color: #fff;
       padding: 20px;
-      background-color: #ffffff;
-      border: 2px solid #ddd;
-      border-radius: 12px;
-      max-width: 800px;
+      border-radius: 10px;
     }
 
     .flex-item {
@@ -42,19 +94,49 @@
       padding: 10px;
     }
 
-    .item1 {
-      background-color: lightcoral;
+    .item1 { background-color: lightcoral; }
+    .item2 { background-color: lightseagreen; }
+    .item3 { background-color: lightskyblue; }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
 
-    .item2 {
-      background-color: lightseagreen;
+    aside ul li {
+      display: inline-block;
+      text-align: center;
     }
 
-    .item3 {
-      background-color: lightskyblue;
+    aside ul li a img {
+      display: block;
+      width: 60px;
+      height: auto;
+      margin: 0 auto;
     }
 
-    @media (max-width: 500px) {
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      section, article, aside {
+        margin-bottom: 10px;
+      }
+
       .flex-item {
         width: 80px;
         height: 80px;
@@ -64,10 +146,68 @@
   </style>
 </head>
 <body>
-  <div class="flex-container">
-    <div class="flex-item item1">Box 1</div>
-    <div class="flex-item item2">Box 2</div>
-    <div class="flex-item item3">Box 3</div>
-  </div>
+
+  <header>
+    <h1>Sample website</h1>
+    <p>This is a sample HTML document to demonstrate the use of HTML tags.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li> 
+    </ul>
+  </nav>
+
+  <section>
+    <h2>About us</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </section>
+
+  <article>
+    <h2>Latest News</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </article>
+
+  <!-- Flexbox Example Section -->
+  <section>
+    <h2>Flexbox Layout Example</h2>
+    <div class="flex-demo">
+      <div class="flex-item item1">Box 1</div>
+      <div class="flex-item item2">Box 2</div>
+      <div class="flex-item item3">Box 3</div>
+    </div>
+  </section>
+
+  <aside>
+    <h2>Related Links</h2>
+    <ul>
+      <li>
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="https://logolook.net/wp-content/uploads/2021/06/Facebook-Logo.png" alt="Facebook" style="width: 100px; height: 60px;">
+        </a>
+        <p style="text-align: center; color: white;">Facebook</p>
+      </li>
+      <li>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 60px; height: 50px;">
+        </a>
+        <p style="text-align: center; color: white;">Instagram</p>
+      </li>
+      <li>
+        <a href="https://www.github.com" target="_blank">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 80px; height: 60px;">
+        </a>
+        <p style="text-align: center; color: white;">GitHub</p>
+      </li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Sample Website. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
