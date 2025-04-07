@@ -14,9 +14,9 @@
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #f4f4f4;
+      background-color: #027e7e;
       color: #333;
-      padding: 20px;
+      padding: 0px;
     }
 
     header {
@@ -66,25 +66,38 @@
       color: white;
       padding: 20px;
       margin-bottom: 20px;
-      border: 1px solid #ddd;
+      border: 1px solid #027e7e;
       border-radius: 5px;
     }
 
     /* Flexbox Section */
     .flex-demo {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 10px;
       background-color: #fff;
-      padding: 20px;
+      padding: 10px;
       border-radius: 10px;
     }
 
-    .flex-item {
-      width: 100px;
-      height: 100px;
+    /*resize the 3 flex items with each different size*/
+    .flex-item:nth-child(1) {
+        width: 330px;
+      height: 500px;
+      color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .flex-item:nth-child(2) {
+        width: 1100px;
+      height: 500px;
       color: white;
       font-size: 1.2rem;
       display: flex;
@@ -94,9 +107,37 @@
       padding: 10px;
     }
 
+    .flex-item:nth-child(3) {
+        width: 330px;
+      height: 500px;
+      color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 10px;
+    }
+    
+
+    /*.flex-item {
+      width: 590px;
+      height: 500px;
+      color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 10px;
+    }*/
+
+    /*resize flex box 2 items to 80px*/
+
+
     .item1 { background-color: lightcoral; }
     .item2 { background-color: lightseagreen; }
-    .item3 { background-color: lightskyblue; }
+    .item3 { background-color: rgb(44, 116, 161); }
 
     aside ul {
       list-style: none;
@@ -162,8 +203,18 @@
   </nav>
 
   <section>
-    <h2>About us</h2>
-    <p>Lorem ipsum dolor sit amet...</p>
+    <h2>Welcome to Our Website</h2>
+    <div class="flex-demo">
+      <div class="flex-item item1">
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere. Semper vel class aptent taciti sociosqu ad litora. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Dis parturient montes nascetur ridiculus mus donec rhoncus. Nulla molestie mattis scelerisque maximus eget fermentum odio.</p>
+      </div>
+      <div class="flex-item item2">
+        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipiscing elit. Pretium tellus duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Blandit quis suspendisse aliquet nisi sodales consequat magna. Ligula congue sollicitudin erat viverra ac tincidunt nam. Velit aliquam imperdiet mollis nullam volutpat porttitor ullamcorper. Dui felis venenatis ultrices proin libero feugiat tristique. Cubilia curae hac habitasse platea dictumst lorem ipsum. Sem placerat in id cursus mi pretium tellus. Fringilla lacus nec metus bibendum egestas iaculis massa. Taciti sociosqu ad litora torquent per conubia nostra. Ridiculus mus donec rhoncus eros lobortis nulla molestie. Mauris pharetra vestibulum fusce dictum risus blandit quis. Finibus facilisis dapibus etiam interdum tortor ligula congue. Justo lectus commodo augue arcu dignissim velit aliquam. Primis vulputate ornare sagittis vehicula praesent dui felis. Senectus netus suscipit auctor curabitur facilisi cubilia curae. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+      </div>
+      <div class="flex-item item3">
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere. Semper vel class aptent taciti sociosqu ad litora. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Dis parturient montes nascetur ridiculus mus donec rhoncus. Nulla molestie mattis scelerisque maximus eget fermentum odio.</p>
+      </div>
+    </div>
   </section>
 
   <article>
@@ -172,14 +223,7 @@
   </article>
 
   <!-- Flexbox Example Section -->
-  <section>
-    <h2>Flexbox Layout Example</h2>
-    <div class="flex-demo">
-      <div class="flex-item item1">Box 1</div>
-      <div class="flex-item item2">Box 2</div>
-      <div class="flex-item item3">Box 3</div>
-    </div>
-  </section>
+
 
   <aside>
     <h2>Related Links</h2>
