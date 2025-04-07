@@ -82,7 +82,7 @@
     }
 
     /* Flexbox Section */
-    .flex-demo {
+    .flex-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -92,36 +92,6 @@
       padding: 10px;
       border-radius: 10px;
     }
-
-    /*resize the 3 flex items with each different size*/
-
-    .flex-container {
-  display: flex;
-  justify-content: space-evenly;
-    align-items: baseline
-
-}
-.flex-container > div:nth-child(1) {
-    width: 350px;
-    height: 530px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: lightblue;
-
-  }
-
-  .flex-container > div:nth-child(2) {
-    width: 550px;
-    height: 730px;
-    background-color: lightgreen;
-  }
-
-  .flex-container > div:nth-child(3) {
-    width: 350px;
-    height: 530px;
-    background-color: lightcoral;
-  }
 
     .flex-item:nth-child(1) {
         width: 330px;
@@ -179,6 +149,38 @@
     .item1 { background-color: lightcoral; }
     .item2 { background-color: lightseagreen; }
     .item3 { background-color: rgb(38, 139, 202); }
+
+    /*resize the 3 flex items with each different size*/
+
+    .flex-container1 {
+  display: flex;
+  justify-content: space-evenly;
+    align-items: baseline
+
+}
+.flex-container1 > div:nth-child(1) {
+    width: 350px;
+    height: 530px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+
+  }
+
+  .flex-container1 > div:nth-child(2) {
+    width: 550px;
+    height: 730px;
+    background-color: lightgreen;
+  }
+
+  .flex-container1 > div:nth-child(3) {
+    width: 350px;
+    height: 530px;
+    background-color: lightcoral;
+  }
+
+
 
     aside ul {
       list-style: none;
@@ -245,7 +247,7 @@
 
   <section>
     <h2>Welcome to Our Website</h2>
-    <div class="flex-demo">
+    <div class="flex-container">
       <div class="flex-item item1">
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere. Semper vel class aptent taciti sociosqu ad litora. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Dis parturient montes nascetur ridiculus mus donec rhoncus. Nulla molestie mattis scelerisque maximus eget fermentum odio.</p>
       </div>
@@ -261,15 +263,15 @@
   <article>
     <h2>Reviews</h2>
     <section>
-        <div class="flex-container">
+        <div class="flex-container1">
           <div class="flex-item item1">
-            <p>Feature 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+            <p>Review 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
           </div>
           <div class="flex-item item2">
-            <p>Feature 2: Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem.</p>
+            <p>Review 2: Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem.</p>
           </div>
           <div class="flex-item item3">
-            <p>Feature 3: Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu.</p>
+            <p>Review 3: Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu.</p>
           </div>
         </div>
       </section>
